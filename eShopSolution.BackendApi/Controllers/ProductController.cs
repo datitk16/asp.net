@@ -57,5 +57,33 @@ namespace eShopSolution.BackendApi.Controllers
 
             return CreatedAtAction(nameof(GetById), new { id = productId }, product);
         }
+
+        [HttpPut]
+        public async Task<IActionResult> Update([FromForm] ProductUpdateRequest request)
+        {
+            var affectedResult = await _manageProductService.Update(request);
+            if (affectedResult == 0)
+                return BadRequest();
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var affectedResult = await _manageProductService.Delete(id);
+            if (affectedResult == 0)
+                return BadRequest();
+            return Ok();
+        }
+
+        [HttpPut("price/{id}/{newPrice}")]
+        public async Task<IActionResult> UpdatePrice(int id, decimal newPrice)
+        {
+            var isSuccessful = await _manageProductService.UpdatePrice(id, newPrice);
+            if (isSuccessful)
+                return Ok();
+
+            return BadRequest();
+        }
     }
 }
