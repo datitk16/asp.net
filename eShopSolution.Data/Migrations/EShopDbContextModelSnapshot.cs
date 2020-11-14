@@ -180,7 +180,7 @@ namespace eShopSolution.Data.Migrations
                         new
                         {
                             Id = new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"),
-                            ConcurrencyStamp = "7046906d-0ec8-4ea4-8402-76eda313d2da",
+                            ConcurrencyStamp = "a86439e3-0486-478c-a198-ceddae4e9be6",
                             Description = "Administrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -257,7 +257,7 @@ namespace eShopSolution.Data.Migrations
                         {
                             Id = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7a337091-1e68-48a5-aedd-3f8eee6cd0b7",
+                            ConcurrencyStamp = "23cefb8a-694b-4ae1-a5c4-1aeb0e0f19d2",
                             Dob = new DateTime(2020, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "tedu.international@gmail.com",
                             EmailConfirmed = true,
@@ -266,7 +266,7 @@ namespace eShopSolution.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "tedu.international@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIFu6nXMEMlo8V4ZOoOG87esz4o3bfoKvAyMe35AxaHVVbXsClfr/sAy8s83vM072A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIbmaj1nQOTN6zDPZenuHxRgFXxmfwQYDKIy9C6a6JGIJ0x/wwtTNYbOKpo7mFtqOA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -520,7 +520,7 @@ namespace eShopSolution.Data.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2020, 10, 22, 23, 37, 30, 993, DateTimeKind.Local).AddTicks(3806));
+                        .HasDefaultValue(new DateTime(2020, 11, 14, 12, 28, 39, 957, DateTimeKind.Local).AddTicks(8344));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
@@ -616,7 +616,7 @@ namespace eShopSolution.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2020, 10, 22, 23, 37, 31, 16, DateTimeKind.Local).AddTicks(1899),
+                            DateCreated = new DateTime(2020, 11, 14, 12, 28, 39, 989, DateTimeKind.Local).AddTicks(1075),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,
